@@ -1,0 +1,7 @@
+nickname,comment
+Nick,hey
+Garry,nope
+Jack,yes
+Fill,nice site
+Grag,who i am?
+Lucy,APLANA - TOP
