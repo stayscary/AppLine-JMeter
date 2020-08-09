@@ -567,15 +567,15 @@ xmlns:gs=&quot;http://spring.io/guides/gs-producing-web-service&quot;&gt;&#xd;
                   <stringProp name="50">2</stringProp>
                   <stringProp name="1722">60</stringProp>
                 </collectionProp>
-                <collectionProp name="85396772">
+                <collectionProp name="141358976">
                   <stringProp name="52">4</stringProp>
                   <stringProp name="52">4</stringProp>
-                  <stringProp name="60">60</stringProp>
+                  <stringProp name="1722">60</stringProp>
                 </collectionProp>
-                <collectionProp name="85472164">
+                <collectionProp name="141434368">
                   <stringProp name="54">6</stringProp>
                   <stringProp name="54">6</stringProp>
-                  <stringProp name="60">60</stringProp>
+                  <stringProp name="1722">60</stringProp>
                 </collectionProp>
                 <collectionProp name="85547556">
                   <stringProp name="56">8</stringProp>
@@ -1199,6 +1199,43 @@ xmlns:gs=&quot;http://spring.io/guides/gs-producing-web-service&quot;&gt;&#xd;
           </value>
         </objProp>
         <stringProp name="filename">C:\Users\Никита\Desktop\IBS\AppLine JMeter Courses\Jmeter НТ\resultsTree.jtl</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="CSV View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\Users\Никита\Desktop\IBS\AppLine JMeter Courses\Jmeter НТ\csvResultTree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">

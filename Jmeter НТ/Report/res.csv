@@ -1,8 +1,8 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
 1597007714243,75,open_site,200,,sendComment 1-1,text,true,,22653,356,1,2,http://localhost:8080/,74,0,35
 1597007714243,75,open_site,200,,clearGuestbookHistory 2-1,text,true,,22653,356,1,2,http://localhost:8080/,74,0,35
-1597007714144,75,Главная,200,"Number of samples in transaction : 1, number of failing samples : 0",sendComment 1-1,,true,,22653,356,1,2,null,74,102,35
 1597007714143,75,Главная,200,"Number of samples in transaction : 1, number of failing samples : 0",clearGuestbookHistory 2-1,,true,,22653,356,1,2,null,74,103,35
+1597007714144,75,Главная,200,"Number of samples in transaction : 1, number of failing samples : 0",sendComment 1-1,,true,,22653,356,1,2,null,74,102,35
 1597007714322,16,guest,200,,clearGuestbookHistory 2-1,text,true,,4112,403,1,2,http://localhost:8080/guestbook.html,16,0,0
 1597007714322,16,clients,200,,sendComment 1-1,text,true,,6135,401,1,2,http://localhost:8080/clients.html,16,0,0
 1597007714322,16,Клиенты,200,"Number of samples in transaction : 1, number of failing samples : 0",sendComment 1-1,,true,,6135,401,1,2,null,16,6,0
