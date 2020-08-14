@@ -787,7 +787,7 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="false"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Open_site" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -1930,6 +1930,24 @@
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="departCity" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">departCity</stringProp>
+                <stringProp name="RegexExtractor.regex">value=&quot;(.*?)&quot;&gt;(.*?)&lt;/option&gt;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="RegexExtractor.match_number">0</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="arriveCity" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">arriveCity</stringProp>
+                <stringProp name="RegexExtractor.regex">&lt;option value=&quot;((?!${departCity}).+?)&quot;&gt;((?!${departCity}).+?)&lt;/option&gt;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="RegexExtractor.match_number">0</stringProp>
+              </RegexExtractor>
+              <hashTree/>
             </hashTree>
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Continue_click" enabled="true">
@@ -1950,7 +1968,7 @@
                   <elementProp name="depart" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">depart</stringProp>
-                    <stringProp name="Argument.value">${__chooseRandom(Denver,Frankfurt,London,Los Angeles,Paris,Portland,San Francisco,Seattle,Sydney,Zurich,departCity)}</stringProp>
+                    <stringProp name="Argument.value">${departCity}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -1964,7 +1982,7 @@
                   <elementProp name="arrive" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">arrive</stringProp>
-                    <stringProp name="Argument.value">${__chooseRandom(Denver,Frankfurt,London,Los Angeles,Paris,Portland,San Francisco,Seattle,Sydney,Zurich,arriveCity)}</stringProp>
+                    <stringProp name="Argument.value">${arriveCity}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -2097,7 +2115,7 @@
               <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="ticket price" enabled="true">
                 <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                 <stringProp name="RegexExtractor.refname">price</stringProp>
-                <stringProp name="RegexExtractor.regex">(\d{3})</stringProp>
+                <stringProp name="RegexExtractor.regex">(\d+)</stringProp>
                 <stringProp name="RegexExtractor.template">$1$</stringProp>
                 <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
                 <stringProp name="RegexExtractor.match_number">2</stringProp>
@@ -2108,7 +2126,7 @@
               <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="flight_number" enabled="true">
                 <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                 <stringProp name="RegexExtractor.refname">flight_number</stringProp>
-                <stringProp name="RegexExtractor.regex">(\d{3})</stringProp>
+                <stringProp name="RegexExtractor.regex">(\d+)</stringProp>
                 <stringProp name="RegexExtractor.template">$1$</stringProp>
                 <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
                 <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -2576,12 +2594,6 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
-            <boolProp name="displayJMeterProperties">false</boolProp>
-            <boolProp name="displayJMeterVariables">true</boolProp>
-            <boolProp name="displaySystemProperties">false</boolProp>
-          </DebugSampler>
-          <hashTree/>
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="CSV Results Tree" enabled="true">
